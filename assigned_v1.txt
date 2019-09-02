@@ -72,7 +72,7 @@ A:9\
 \
 Q(additionals): Did you include cash payments, such as reimbursements received from social security and public assistance programs in your client income calculations?\
 A: Yes\
-	Q(2.1):GOTO:portion\
+	Q(2.1):GOTO:type\
 A: No\
 	Q(2.2):Please go through the income related questions and include cash payments, such as reimbursements received from social security and public assistance programs in your client income calculations.<br><br>GOTO:household\
 \
