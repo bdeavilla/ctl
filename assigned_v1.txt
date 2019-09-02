@@ -1,0 +1,92 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2501
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Title: Washington Indigency Calculator\
+Author: Brandon DeAvilla\
+Before:<link rel="stylesheet" type="text/css" href="https://suffolklitlab.org/howto/qna/style/style.css">\
+<div id="icon" style="background-size: 110px 99px;background-image: url('https://suffolklitlab.org/howto/qna/images/maxheadroom.gif');"></div>\
+<h2 style="text-align:center;">Washington Indigency Calculator</h2>\
+<p><b>This is a <a href="http://www.codingthelaw.org/">class project</a>. You should not rely on it as a source of legal information. It is likely incomplete.</b></p>\
+<p>Answer the following questions to see if someone qualifies for appointment of counsel in Washington.</p>\
+\
+\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 Q(household): How many persons (including your client) are in their household?\
+A:1\
+	Q(1.1):Does their yearly income exceed $15,612.50\
+	A: Yes\
+		Q(1.1.1):GOTO:ineligible\
+	A: No\
+		Q(1.1.2):GOTO:additionals\
+A:2\
+	Q(1.2):Does their yearly income exceed $21,137.50\
+	A: Yes\
+		Q(1.2.1):GOTO:ineligible\
+	A: No\
+		Q(1.2.2):GOTO:additionals\
+A:3\
+	Q(1.3):Does their yearly income exceed $26,662.50\
+	A: Yes\
+		Q(1.3.1):GOTO:ineligible\
+	A: No\
+		Q(1.3.2):GOTO:additionals\
+A:4\
+	Q(1.4):Does their yearly income exceed $32,187.50\
+	A: Yes\
+		Q(1.4.1):GOTO:ineligible\
+	A: No\
+		Q(1.4.2):GOTO:additionals\
+A:5\
+	Q(1.5):Does their yearly income exceed $37,712.50\
+	A: Yes\
+		Q(1.5.1):GOTO:ineligible\
+	A: No\
+		Q(1.5.2):GOTO:additionals\
+A:6\
+	Q(1.6):Does their yearly income exceed $43,237.50\
+	A: Yes\
+		Q(1.6.1):GOTO:ineligible\
+	A: No\
+		Q(1.6.2):GOTO:additionals\
+A:7\
+	Q(1.7):Does their yearly income exceed $48,762.50\
+	A: Yes\
+		Q(1.7.1):GOTO:ineligible\
+	A: No\
+		Q(1.7.2):GOTO:additionals\
+A:8\
+	Q(1.8):Does their yearly income exceed $54,287.50\
+	A: Yes\
+		Q(1.8.1):GOTO:ineligible\
+	A: No\
+		Q(1.8.2):GOTO:additionals\
+A:9\
+	Q(1.9):Does their yearly income exceed $59,812.50 +$5,525 per additional household member after (9)\
+	A: Yes\
+		Q(1.9.1):GOTO:ineligible\
+	A: No\
+		Q(1.9.2):GOTO:additionals\
+\
+Q(additionals): Did you include cash payments, such as reimbursements received from social security and public assistance programs in your client income calculations?\
+A: Yes\
+	Q(2.1):GOTO:portion\
+A: No\
+	Q(2.2):Please go through the income related questions and include cash payments, such as reimbursements received from social security and public assistance programs in your client income calculations.<br><br>GOTO:household\
+\
+Q(portion): Can the client afford a portion of the cost of counsel?\
+A: Yes\
+	Q(3.1):GOTO:partial\
+A: No\
+	Q(3.2):GOTO:eligible\
+\
+\
+\
+\
+Q(ineligible): Unfortunately, the client is not considered indigent and is ineligible for waived counsel fees.\
+Q(eligible): The client is considered indigent and is eligible for free counsel\
+Q(partial): The client has partial eligibility, and will likely only need to pay a portion of counsel fees.}
