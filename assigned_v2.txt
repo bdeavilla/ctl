@@ -1,0 +1,58 @@
+Title: Washington Indigency Calculator
+Author: Brandon DeAvilla
+Before:<script src="https://bdeavilla.github.io/ctl/js/functions.js"></script><link rel="stylesheet" type="text/css" href="https://suffolklitlab.org/howto/qna/style/style.css">
+<div id="icon" style="background-size: 110px 99px;background-image: url('https://suffolklitlab.org/howto/qna/images/maxheadroom.gif');"></div>
+<h2 style="text-align:center;">Washington Indigency Calculator</h2>
+<p><b>This is a <a href="http://www.codingthelaw.org/">class project</a>. You should not rely on it as a source of legal information. It is likely incomplete.</b></p>
+<p>Answer the following questions to see if someone qualifies for appointment of counsel in Washington.</p>
+
+
+Q(household): How many persons (including your client) are in their household?
+X:number
+	Q(income): How much income does your clients household bring in per year after tax?  Please include cash payments, such as reimbursements received from social security and public assistance programs.
+	X:number
+		Q(type): Is the client facing a civil or criminal matter?
+		A[javascript:if (fedpov(getvar('household'),getvar('income'))){ goto('ineligible') } else { goto('civil') } ]: Civil
+		A[javascript:if (fedpov(getvar('household'),getvar('income'))){ goto('ineligible') }  else { goto('portion') } ]: Criminal
+
+
+
+Q(portion): Can the client afford a portion of the cost of counsel?
+A: Yes
+	Q(2.1):GOTO:partial
+A: No
+	Q(2.2):GOTO:eligible
+
+Q(civil):Select from the below, which type of case is closely related to your clients
+A:Alleging a discriminatory housing practice or person against whom such a practice is alleged
+	Q(3.1):GOTO:might
+A:Physical liberty or fundamental liberty is at risk
+	Q(3.2):GOTO:might
+A:Alleging a violation of an order for protection issued under Chapter 26.50 (Domestic Violence Prevention)
+	Q(3.3):GOTO:might
+A: Involuntary civil commitment prior to the probable cause hearing
+	Q(3.4):GOTO:might
+A: Accused in civil commitment matters of being a sexually violent predator
+	Q(3.5):GOTO:might
+A: Termination of parental rights proceedings
+	Q(3.6):GOTO:might
+A: Non-consenting parents in private adoption proceedings where the prospective adoptive parent seeks to terminate parental rights of the natural parent
+	Q(3.7):GOTO:might
+A: Children subjected to extended foster care
+	Q(3.8):GOTO:might
+A: Civil contempt proceeding, provided the threat of imprisonment is immediate
+	Q(3.9):GOTO:might
+A: Juvenile Delinquency, Status Offenses, or Child in Need of Supervision Proceedings
+	Q(5.10):GOTO:might
+A: Habeas Corpus petitioners prior to the evidentiary hearing stage and/or at the first appellate level
+	Q(5.11):GOTO:might
+A: Attorney disciplinary proceedings
+	Q(5.12):GOTO:might
+A: None of the above
+	Q(5.13):GOTO:ineligible
+
+
+Q(ineligible): Unfortunately, the client is not considered indigent and is ineligible for waived counsel fees.
+Q(eligible): The client is considered indigent and is eligible for free counsel
+Q(partial): The client has partial eligibility, and will likely only need to pay a portion of counsel fees.
+Q(might): The client might be eligible for court appointed representation, please speak with the clerks office.
