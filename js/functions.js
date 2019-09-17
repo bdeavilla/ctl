@@ -1,4 +1,3 @@
-<script>
 function fedpov(house,income,percentage){
 	// Determines if your income is less than or equal to 
 	// a percentage of the 2018 federal poverty guidelines 
@@ -33,4 +32,3 @@ function fedpov(house,income,percentage){
 			return false;
 		}
 	}	
-</script>
