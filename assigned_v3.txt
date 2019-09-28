@@ -4,7 +4,7 @@ Author: Brandon DeAvilla
 
 Before:<script src="https://bdeavilla.github.io/ctl/js/functions.js"></script><link rel="stylesheet" type="text/css" href="https://suffolklitlab.org/howto/qna/style/style.css">
 <input type="hidden" name="name" value="Eligibility Letter"/>
-<input type="hidden" name="docx_uri" value="https://github.com/bdeavilla/ctl/blob/master/QnA%20Letter.docx?raw=true"/>
+<input type="hidden" name="docx_uri" value="https://bdeavilla.github.io/ctl/eligibiliy_letter.docx"/>
 <div id="icon" style="background-size: 110px 99px;background-image: url('https://suffolklitlab.org/howto/qna/images/maxheadroom.gif');"></div>
 
 <h2 style="text-align:center;">Washington Indigency Calculator</h2>
