@@ -21,6 +21,7 @@ Before:<script src="https://bdeavilla.github.io/ctl/js/functions.js"></script><l
 
 Q(name): What is the clients full name?
 X:
+	Q(1.1):GOTO:household
 Q(household): How many persons (including your client) are in their household?
 
 X:number
