@@ -117,29 +117,24 @@ A: None of the above
 
 Q(ineligible): Unfortunately, the client is not considered indigent and is ineligible for waived counsel fees.
 A: Proceed to printing client eligibility letter
-	Q(letter1):GOTO:ineligibleLetter
+	Q(5.1):Would you like a formal letter?
+	A[javascript:submit2('https://colarusso.pythonanywhere.com/2pdf/', 'POST', '', '', '', 'json_doc', '_blank')]:Yes (pdf).
+		Q(5.1.1): Thank you.
 
 Q(eligible): The client is considered indigent and is eligible for free counsel
 A: Proceed to printing client eligibility letter
-	Q(letter2):GOTO:eligibleLetter
+	Q(6.1):Would you like a formal letter?
+	A[javascript:submit2('https://colarusso.pythonanywhere.com/2pdf/', 'POST', '', '', '', 'json_doc', '_blank')]:Yes (pdf).
+		Q(6.1.1): Thank you.
 
 Q(partial): The client has partial eligibility, and will likely only need to pay a portion of counsel fees.
 A: Proceed to printing client eligibility letter
-	Q(letter3):GOTO:partialLetter
+	Q(7.1):Would you like a formal letter?
+	A[javascript:submit2('https://colarusso.pythonanywhere.com/2pdf/', 'POST', '', '', '', 'json_doc', '_blank')]:Yes (pdf).
+		Q(7.1.1): Thank you.
 
 Q(might): The client might be eligible for court appointed representation, please speak with the clerks office.
 A: Proceed to printing client eligibility letter
-	Q(letter4):GOTO:mightLetter
-
-Q(ineligibleLetter): Are you ready for your letter?
-A[javascript:submit2('https://colarusso.pythonanywhere.com/2pdf/', 'POST', '', '', '', 'json_doc', '_blank')]:Yes (pdf).
-		Q(2.1.1): Thank you.
-Q(eligibleLetter): Are you ready for your letter?
-A[javascript:submit2('https://colarusso.pythonanywhere.com/2pdf/', 'POST', '', '', '', 'json_doc', '_blank')]:Yes (pdf).
-		Q(2.1.1): Thank you.
-Q(partialLetter): Are you ready for your letter?
-A[javascript:submit2('https://colarusso.pythonanywhere.com/2pdf/', 'POST', '', '', '', 'json_doc', '_blank')]:Yes (pdf).
-		Q(2.1.1): Thank you.
-Q(mightLetter): Are you ready for your letter?
-A[javascript:submit2('https://colarusso.pythonanywhere.com/2pdf/', 'POST', '', '', '', 'json_doc', '_blank')]:Yes (pdf).
-		Q(2.1.1): Thank you.
+	Q(8.1):Would you like a formal letter?
+	A[javascript:submit2('https://colarusso.pythonanywhere.com/2pdf/', 'POST', '', '', '', 'json_doc', '_blank')]:Yes (pdf).
+		Q(8.1.1): Thank you.
