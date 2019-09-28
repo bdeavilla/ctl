@@ -4,7 +4,7 @@ Author: Brandon DeAvilla
 
 Before:<script src="https://bdeavilla.github.io/ctl/js/functions.js"></script><link rel="stylesheet" type="text/css" href="https://suffolklitlab.org/howto/qna/style/style.css">
 <input type="hidden" name="name" value="Eligibility Letter"/>
-<input type="hidden" name="docx_uri" value="https://bdeavilla.github.io/ctl/eligibiliy_letter.docx"/>
+<input type="hidden" name="docx_uri" value="https://github.com/bdeavilla/ctl/blob/master/QnA%20Letter.docx?raw=true"/>
 <div id="icon" style="background-size: 110px 99px;background-image: url('https://suffolklitlab.org/howto/qna/images/maxheadroom.gif');"></div>
 
 <h2 style="text-align:center;">Washington Indigency Calculator</h2>
@@ -119,23 +119,24 @@ A: None of the above
 Q(ineligible): Unfortunately, the client is not considered indigent and is ineligible for waived counsel fees.
 A: Proceed to printing client eligibility letter
 	Q(5.1):Would you like a formal letter?
-	A[javascript:submit2('https://colarusso.pythonanywhere.com/2pdf/', 'POST', '', '', '', 'json_doc', '_blank')]:Yes (pdf).
+	A[javascript:submit2('https://colarusso.pythonanywhere.com/2docx/', 'POST', '', '', '', 'json_doc', '_blank')]:Yes (docx).
 		Q(5.1.1): Thank you.
 
 Q(eligible): The client is considered indigent and is eligible for free counsel
 A: Proceed to printing client eligibility letter
 	Q(6.1):Would you like a formal letter?
-	A[javascript:submit2('https://colarusso.pythonanywhere.com/2pdf/', 'POST', '', '', '', 'json_doc', '_blank')]:Yes (pdf).
+	A[javascript:submit2('https://colarusso.pythonanywhere.com/2docx/', 'POST', '', '', '', 'json_doc', '_blank')]:Yes (docx).
 		Q(6.1.1): Thank you.
 
 Q(partial): The client has partial eligibility, and will likely only need to pay a portion of counsel fees.
 A: Proceed to printing client eligibility letter
 	Q(7.1):Would you like a formal letter?
-	A[javascript:submit2('https://colarusso.pythonanywhere.com/2pdf/', 'POST', '', '', '', 'json_doc', '_blank')]:Yes (pdf).
+	A[javascript:submit2('https://colarusso.pythonanywhere.com/2docx/', 'POST', '', '', '', 'json_doc', '_blank')]:Yes (docx).
 		Q(7.1.1): Thank you.
 
 Q(might): The client might be eligible for court appointed representation, please speak with the clerks office.
 A: Proceed to printing client eligibility letter
 	Q(8.1):Would you like a formal letter?
-	A[javascript:submit2('https://colarusso.pythonanywhere.com/2pdf/', 'POST', '', '', '', 'json_doc', '_blank')]:Yes (pdf).
+	A[javascript:submit2('https://colarusso.pythonanywhere.com/2docx/', 'POST', '', '', '', 'json_doc', '_blank')]:Yes (docx).
 		Q(8.1.1): Thank you.
+
